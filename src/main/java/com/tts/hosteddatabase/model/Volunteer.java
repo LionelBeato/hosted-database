@@ -10,7 +10,7 @@ import java.util.Collection;
 public class Volunteer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String password;
     private String firstName;
