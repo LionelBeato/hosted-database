@@ -12,6 +12,11 @@ public class VolunteerController {
     @Autowired
     VolunteerRepository volunteerRepository;
 
+    @GetMapping("/")
+    public String getIndex() {
+        return "Hello Heroku!";
+    }
+
     @GetMapping("/all")
     public Iterable<Volunteer> getAllVolunteers() {
         return volunteerRepository.findAll();
