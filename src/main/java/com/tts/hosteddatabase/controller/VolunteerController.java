@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Optional;
+
 @RestController
 public class VolunteerController {
 
@@ -20,6 +22,13 @@ public class VolunteerController {
     @GetMapping("/all")
     public Iterable<Volunteer> getAllVolunteers() {
         return volunteerRepository.findAll();
+    }
+
+    @GetMapping("/new")
+    public Optional<Volunteer> getNewVolunteer() {
+        Volunteer volunteer = new Volunteer("password", "jimmy", "neutron", "jimbo");
+        volunteerRepository.save(volunteer);
+        return volunteerRepository.findByUsername("jimbo");
     }
 
 }
