@@ -23,4 +23,9 @@ public class DogController {
         return dogRepository.findById(1L);
     }
 
+    @GetMapping("/all")
+    public Iterable<Dog> getAllDogs() {
+        return dogRepository.findAll();
+    }
+
 }
