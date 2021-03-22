@@ -13,22 +13,22 @@ public class DogService {
 
     @Autowired
     DogRepository dogRepository;
-
-    public Number getDogAverage() {
-        List<Integer> dogList = new ArrayList<>();
-
-        dogRepository.findAll()
-                .forEach((dog) -> {
-                   dogList.add(dog.getDogRating());
-                });
-
-       Integer resultFromReduce = dogList
-               .stream()
-               .reduce((a, b) -> a + b)
-               .orElseThrow();
-
-       Integer result = resultFromReduce / dogList.size();
-       return result;
-    }
+//
+//    public Number getDogAverage() {
+//        List<Integer> dogList = new ArrayList<>();
+//
+//        dogRepository.findAll()
+//                .forEach((dog) -> {
+//                   dogList.add(dog.getDogRating());
+//                });
+//
+//       Integer resultFromReduce = dogList
+//               .stream()
+//               .reduce((a, b) -> a + b)
+//               .orElseThrow();
+//
+//       Integer result = resultFromReduce / dogList.size();
+//       return result;
+//    }
 
 }
