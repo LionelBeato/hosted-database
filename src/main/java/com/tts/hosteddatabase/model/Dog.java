@@ -18,6 +18,20 @@ public class Dog {
         return id;
     }
 
+    private Integer dogRating;
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Integer getDogRating() {
+        return dogRating;
+    }
+
+    public void setDogRating(Integer dogRating) {
+        this.dogRating = dogRating;
+    }
+
     public String getName() {
         return name;
     }
